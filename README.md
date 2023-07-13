@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby version 3.2.1
+Rails version  7.0.6
 
-Things you may want to cover:
+gems:
+bootstrap5-kaminari-views
+bootstrap
+kaminari
+dotenv-rails
+rest-client
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Files to be analyzed:
+app/controllers/users_controller.rb
+app/views/users/index.html.erb
+config/routes.rb

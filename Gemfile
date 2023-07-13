@@ -49,6 +49,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'bootstrap', '~> 5.2', '>= 5.2.3'
+gem 'bootstrap5-kaminari-views', '~> 0.0.1'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'rest-client', '~> 2.1'
 
