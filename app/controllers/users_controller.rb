@@ -1,14 +1,13 @@
 require 'rest-client'
 
 class UsersController < ApplicationController
-  # BASE_URL = 'https://run.mocky.io/v3/ce47ee53-6531-4821-a6f6-71a188eaaee0'
-
   BASE_URL = ENV['URL']
   def index
     response = RestClient.get(BASE_URL)
+    data = JSON.parse(response.body) if response.code == 200
 
-    @users = response.code == 200 ? JSON.parse(response.body) : []
+    @users = data['users'] || []
 
-    @paginated_users = Kaminari.paginate_array(@users['users']).page(params[:page]).per(10)
+    @paginated_users = Kaminari.paginate_array(@users).page(params[:page]).per(10)
   end
 end
